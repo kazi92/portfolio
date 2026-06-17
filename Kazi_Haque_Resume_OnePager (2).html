@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Kazi Haque — Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1B4FD8;--blue-light:#EEF3FF;--dark:#0F172A;--mid:#334155;
+  --muted:#64748B;--rule:#E2E8F0;--bg:#F1F5F9;--white:#fff;
+}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--dark);font-size:11.2px;line-height:1.44;-webkit-font-smoothing:antialiased;padding:22px 14px 50px;}
+.save-btn{position:fixed;top:13px;right:13px;background:var(--blue);color:#fff;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;padding:6px 14px;border:none;border-radius:5px;cursor:pointer;box-shadow:0 2px 8px rgba(27,79,216,.35);z-index:99;}
+.save-btn:hover{opacity:.85}
+
+/* PAGE */
+.page{max-width:800px;margin:0 auto;background:var(--white);box-shadow:0 1px 3px rgba(0,0,0,.08),0 8px 32px rgba(0,0,0,.09);border-radius:4px;display:grid;grid-template-columns:192px 1fr;}
+
+/* SIDEBAR */
+.sidebar{background:#0F172A;color:#fff;padding:24px 15px 20px;border-radius:4px 0 0 4px;display:flex;flex-direction:column;gap:14px;}
+.sb-name{font-size:17px;font-weight:700;line-height:1.2;letter-spacing:-.3px;color:#fff;}
+.sb-title{font-size:8.5px;font-weight:500;color:#94A3B8;letter-spacing:.09em;text-transform:uppercase;margin-top:3px;line-height:1.5;}
+.s-hd{font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8;padding-bottom:4px;border-bottom:1px solid #1E293B;margin-bottom:5px;}
+.ci{display:flex;align-items:flex-start;gap:6px;font-size:9.5px;color:#CBD5E1;margin-bottom:3px;line-height:1.4;}
+.ci .ic{font-size:9.5px;flex-shrink:0;color:#60A5FA;}
+.ci a{color:#CBD5E1;text-decoration:none;}
+.bar-lbl{font-size:9px;color:#CBD5E1;margin-bottom:2px;}
+.bar-bg{height:2.5px;background:#1E293B;border-radius:2px;margin-bottom:5px;}
+.bar-fill{height:2.5px;background:linear-gradient(90deg,#3B82F6,#60A5FA);border-radius:2px;}
+.s-tag{display:inline-block;background:#1E293B;color:#94A3B8;font-size:8.5px;font-weight:500;padding:2px 6px;border-radius:3px;margin:1px 1px 0 0;}
+.aw{font-size:9.5px;color:#CBD5E1;margin-bottom:3px;padding-left:9px;position:relative;line-height:1.4;}
+.aw::before{content:"★";position:absolute;left:0;color:#FBBF24;font-size:7.5px;top:1px;}
+
+/* MAIN */
+.main{padding:20px 22px 18px;display:flex;flex-direction:column;gap:11px;}
+.sec-hd{font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);padding-bottom:3px;border-bottom:1.5px solid var(--rule);margin-bottom:7px;}
+.summary{font-size:10.5px;color:var(--mid);line-height:1.6;}
+.tags{display:flex;flex-wrap:wrap;gap:3px;}
+.tag{font-size:9px;font-weight:500;background:var(--blue-light);color:var(--blue);padding:2px 7px;border-radius:3px;border:1px solid #C7D9FF;}
+
+/* JOBS */
+.job{margin-bottom:8px;}
+.job:last-child{margin-bottom:0;}
+.jt{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;}
+.j-title{font-size:11.5px;font-weight:700;color:var(--dark);}
+.j-date{font-size:9px;color:var(--muted);white-space:nowrap;font-weight:500;}
+.j-co{font-size:10px;font-weight:600;color:var(--blue);margin:1px 0 0;}
+.j-sub{font-size:9px;color:var(--muted);font-style:italic;margin-bottom:3px;}
+.bl{list-style:none;padding:0;}
+.bl li{position:relative;padding-left:11px;font-size:10px;color:var(--mid);line-height:1.5;margin-bottom:2px;}
+.bl li::before{content:"▸";position:absolute;left:0;color:var(--blue);font-size:7.5px;top:2px;}
+.bl li b{color:var(--dark);font-weight:600;}
+
+.cert-li{font-size:9.5px;color:var(--mid);padding:2px 0 2px 9px;position:relative;border-bottom:1px solid var(--rule);line-height:1.4;}
+.cert-li:last-child{border-bottom:none;}
+.cert-li::before{content:"◆";position:absolute;left:0;color:var(--blue);font-size:6.5px;top:4px;}
+
+@media print{
+  @page{margin:0;size:A4;}
+  body{background:#fff;padding:0;}
+  .page{box-shadow:none;border-radius:0;max-width:100%;width:100%;}
+  .save-btn{display:none;}
+}
+</style>
+</head>
+<body>
+<button class="save-btn" onclick="window.print()">⬇ Save as PDF</button>
+<div class="page">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+      <div class="sb-name">Kazi<br>Haque</div>
+      <div class="sb-title">AI Product Leader<br>SaaS Co-Founder · DevRel</div>
+    </div>
+    <div>
+      <div class="s-hd">Contact</div>
+      <div class="ci"><span class="ic">✉</span><a href="mailto:kazithaque22@gmail.com">kazithaque22@gmail.com</a></div>
+      <div class="ci"><span class="ic">📱</span>+91 96812 13259</div>
+      <div class="ci"><span class="ic">🔗</span><a href="https://linkedin.com/in/haquekazi">linkedin.com/in/haquekazi</a></div>
+      <div class="ci"><span class="ic">📍</span>Kolkata, India</div>
+    </div>
+    <div>
+      <div class="s-hd">Technical Skills</div>
+      <div class="bar-lbl">AI / ML / LLMs</div>
+      <div class="bar-bg"><div class="bar-fill" style="width:88%"></div></div>
+      <div class="bar-lbl">IoT & Edge Computing</div>
+      <div class="bar-bg"><div class="bar-fill" style="width:90%"></div></div>
+      <div class="bar-lbl">Python / Java / Scala</div>
+      <div class="bar-bg"><div class="bar-fill" style="width:80%"></div></div>
+      <div class="bar-lbl">Cloud (AWS / GCP)</div>
+      <div class="bar-bg"><div class="bar-fill" style="width:75%"></div></div>
+      <div class="bar-lbl">Product & GTM Strategy</div>
+      <div class="bar-bg"><div class="bar-fill" style="width:95%"></div></div>
+    </div>
+    <div>
+      <div class="s-hd">Tools & Platforms</div>
+      <span class="s-tag">OpenVINO</span><span class="s-tag">NVIDIA CUDA</span>
+      <span class="s-tag">Intel oneAPI</span><span class="s-tag">MQTT</span>
+      <span class="s-tag">LoRaWAN</span><span class="s-tag">Raspberry Pi</span>
+      <span class="s-tag">FlutterFlow</span><span class="s-tag">Git</span>
+      <span class="s-tag">Jira</span><span class="s-tag">Jupyter</span>
+    </div>
+    <div>
+      <div class="s-hd">Awards & Community</div>
+      <div class="aw">Intel Software Innovator — 4× (2020–2023)</div>
+      <div class="aw">GDG Cloud Kolkata — Lead (10K+ members)</div>
+      <div class="aw">FlutterFlow Kolkata — Chapter Lead 2024</div>
+      <div class="aw">NVIDIA Inception Program Partner</div>
+      <div class="aw">Published — Indo-Taiwan ICAN 2020</div>
+    </div>
+    <div>
+      <div class="s-hd">Education</div>
+      <div style="font-size:10px;font-weight:600;color:#fff;">B.Tech — Information Technology</div>
+      <div style="font-size:9px;color:#94A3B8;margin-top:2px;">West Bengal Univ. of Technology</div>
+      <div style="font-size:8.5px;color:#64748B;margin-top:1px;">2010–2014 · GPA 7.2/10</div>
+    </div>
+    <div>
+      <div class="s-hd">Certifications</div>
+      <div class="aw" style="font-size:9px;">Intel® Certified — oneAPI C++ SYCL</div>
+      <div class="aw" style="font-size:9px;">Intel® OpenVINO™ for Computer Vision</div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <section>
+      <div class="sec-hd">Profile</div>
+      <p class="summary">AI Product Leader and SaaS Co-Founder with <b>10+ years</b> scaling products across AI, IoT, and enterprise software. Driven <b>$500K+ in revenue</b>, led teams of 20+, and deployed solutions to <b>10+ Fortune 500 companies</b> across APAC and global markets. Expert in AI/ML, B2B SaaS, and developer ecosystems across BFSI and Retail verticals.</p>
+    </section>
+
+    <section>
+      <div class="sec-hd">Core Competencies</div>
+      <div class="tags">
+        <span class="tag">AI Product Strategy</span><span class="tag">Growth Marketing</span>
+        <span class="tag">B2B SaaS</span><span class="tag">Go-to-Market</span>
+        <span class="tag">Fundraising</span><span class="tag">Computer Vision</span>
+        <span class="tag">Developer Relations</span><span class="tag">Edge Computing</span>
+        <span class="tag">Product Roadmapping</span><span class="tag">Enterprise Sales</span>
+        <span class="tag">Community Building</span><span class="tag">API/SDK Integration</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-hd">Professional Experience</div>
+
+      <div class="job">
+        <div class="jt"><span class="j-title">Co-Founder & Growth Marketing Head</span><span class="j-date">Apr 2023 – Present</span></div>
+        <div class="j-co">Blackspektro Solutions LLC — USA</div>
+        <div class="j-sub">Industrial automation SaaS · Kernopy.com · Team of 12</div>
+        <ul class="bl">
+          <li>Driving <b>$500K+ in annual revenue</b> by owning and scaling strategic enterprise client relationships across the US, APAC, and global markets as Growth Marketing lead.</li>
+          <li>Spearheading product strategy and development for <b>Kernopy.com</b>, an industrial automation SaaS platform — managing roadmap, feature prioritization, and end-to-end GTM execution.</li>
+          <li>Leading a cross-functional team of <b>12 engineers and developers</b>, aligning product delivery with revenue growth targets and enterprise client commitments.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="jt"><span class="j-title">Founder & Product Manager</span><span class="j-date">Aug 2021 – Present</span></div>
+        <div class="j-co">Dynopii Corporation (Inc.) — USA / Kolkata, India</div>
+        <div class="j-sub">Callchimp.ai · AI voice automation · GDG Cloud & Intel Community Lead</div>
+        <ul class="bl">
+          <li>Secured <b>$500K seed funding</b>; drove Callchimp.ai toward projected <b>$100K MRR</b> via enterprise B2B SaaS pivot targeting BFSI & Retail verticals across APAC.</li>
+          <li>Scaled <b>GDG Cloud Kolkata 0 → 10,000+ members</b>; evangelized Intel oneAPI to <b>100K+ developers</b> globally — recognised as <b>4× Intel Software Innovator</b> (2020–2023).</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="jt"><span class="j-title">Product Manager</span><span class="j-date">May 2020 – Aug 2021</span></div>
+        <div class="j-co">Hipla Technologies Pte Ltd — Singapore · Acquired by Inventry (UK)</div>
+        <div class="j-sub">Contatrack.ai · AI workplace compliance SaaS · Team of 23</div>
+        <ul class="bl">
+          <li>Built real-time CCTV compliance SaaS cutting costs <b>8%</b>, boosting efficiency <b>10%+</b>; deployed to <b>10+ Fortune 500</b> enterprises; core lead in Hipla's <b>UK acquisition</b>.</li>
+          <li>Designed CPU-optimised Deep Learning Face Recognition pipeline reducing deployment cost by <b>~30%</b>.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="jt"><span class="j-title">Product Manager</span><span class="j-date">Oct 2016 – Mar 2020</span></div>
+        <div class="j-co">i&amp;We — Kolkata, India</div>
+        <div class="j-sub">Industrial IoT SaaS · Predictive Maintenance · Team of 22</div>
+        <ul class="bl">
+          <li>Designed the IoT Framework for data flow management for an Industrial IIoT portal for predictive maintenance, reducing machinery downtime by <b>21%+</b>.</li>
+          <li>Spearheaded a team of <b>22 professionals</b> through the full product development cycle of the IIoT dashboard portal, including rapid prototyping, pre-sales coordination, and customer success management.</li>
+          <li>Implemented <b>MQTT</b> for edge-to-cloud dataflow, <b>LoRaWAN</b> for physical layer connectivity, and <b>M2M SIM</b> modules for hub-to-cloud networking, reducing bandwidth and improving processing speed.</li>
+          <li>Designed Edge Computing architecture to cut cloud latency and costs; co-developed the <b>"Data Center to Edge AI"</b> course with Intel and trained at IIT Kharagpur, ISI Kolkata, IIT Kanpur, IIT Guwahati, IIT Delhi, and NIT Trichy (2019) with <b>96%+ positive feedback</b>.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="jt"><span class="j-title">Senior Systems Engineer</span><span class="j-date">Sep 2014 – Oct 2016</span></div>
+        <div class="j-co">Infosys Limited — Bhubaneswar, India</div>
+        <div class="j-sub">Client: Apple Inc. · EMEA Region · Java / Spring Framework</div>
+        <ul class="bl">
+          <li>Developed and deployed the <b>SPCO online payment module</b> for Apple Online Store across the EMEA region.</li>
+          <li>Created a product feedback dashboard using <b>Java Spring Framework</b> for Apple Inc., enabling structured collection and analysis of user feedback.</li>
+          <li>Deployed a new resource management framework reducing new project setup time, achieving <b>100% SLA adherence</b>, eliminating production SLA tickets, and shortening data integration timelines.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-hd">Certifications & Publication</div>
+      <div class="cert-li">Intel® Certified Instructor — oneAPI C++ SYCL Essentials</div>
+      <div class="cert-li">Introduction to Intel® OpenVINO™ Toolkit for Computer Vision Applications</div>
+      <div class="cert-li">Publication: "Drug Discovery & Identification using AI" — Indo-Taiwan ICAN 2020</div>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>

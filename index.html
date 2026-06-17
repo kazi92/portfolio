@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="midnight" data-theme-mode="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kazi Haque | AI Product Leader & B2B SaaS Advisor</title>
+    <meta name="description" content="Portfolio of Kazi Haque, an AI Product Leader, SaaS Co-Founder, and DevRel Consultant specializing in AI/ML strategy, B2B SaaS growth, and Edge Computing.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor Follower -->
+    <div class="cursor-follower" id="cursorFollower"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- Canvas Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-dot"></span>
+                KAZI HAQUE<span class="logo-accent">.</span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#" class="nav-link active" data-section="home">Home</a>
+                <a href="#services" class="nav-link" data-section="services">Services</a>
+                <a href="#about" class="nav-link" data-section="about">Ventures</a>
+                <a href="#projects" class="nav-link" data-section="projects">Products</a>
+                <a href="#community" class="nav-link" data-section="community">Community</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <!-- Theme Switcher -->
+                <div class="theme-switcher">
+                    <button class="theme-btn" id="themeBtn" aria-label="Toggle Theme Menu" aria-haspopup="true">
+                        <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <path d="M12 2v2"></path>
+                            <path d="M12 20v2"></path>
+                            <path d="m4.93 4.93 1.41 1.41"></path>
+                            <path d="m17.66 17.66 1.41 1.41"></path>
+                            <path d="M2 12h2"></path>
+                            <path d="M20 12h2"></path>
+                            <path d="m6.34 17.66-1.41 1.41"></path>
+                            <path d="m19.07 4.93-1.41 1.41"></path>
+                        </svg>
+                    </button>
+                    <div class="theme-dropdown" id="themeDropdown">
+                        <button class="theme-opt active" data-theme="midnight">
+                            <span class="theme-color-preview color-midnight"></span>
+                            Obsidian Gold
+                        </button>
+                        <button class="theme-opt" data-theme="emerald">
+                            <span class="theme-color-preview color-emerald"></span>
+                            SaaS Emerald
+                        </button>
+                        <button class="theme-opt" data-theme="crimson">
+                            <span class="theme-color-preview color-crimson"></span>
+                            Steel Digital
+                        </button>
+                    </div>
+                </div>
+                <!-- Mode Toggle (Light/Dark) -->
+                <button class="mode-toggle" id="modeToggle" aria-label="Toggle Light/Dark Mode">
+                    <svg class="mode-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="m4.93 4.93 1.41 1.41"></path>
+                        <path d="m17.66 17.66 1.41 1.41"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="m6.34 17.66-1.41 1.41"></path>
+                        <path d="m19.07 4.93-1.41 1.41"></path>
+                    </svg>
+                    <svg class="mode-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                    </svg>
+                </button>
+                <!-- Menu Toggle (Mobile) -->
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-container container">
+                <div class="hero-content">
+                    <div class="badge-container">
+                        <span class="glow-badge">Available for Advisory & C-Suite Roles</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Building & Scaling <br>
+                        <span class="gradient-text">High-Impact Tech</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        Hi, I'm Kazi Haque. I am an <span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        AI Product Leader and SaaS Co-Founder with 10+ years scaling solutions across AI, IoT, and enterprise software. Driven $500K+ in seed funding, deployed products to Fortune 500 companies, and trained 100K+ developers globally.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="https://calendly.com/kazithaque22/introductory-meet-with-kazi-haque" target="_blank" rel="noopener" class="btn btn-primary glow-effect">
+                            Book Advisory Call
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">Explore Products</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="avatar-wrapper-glow"></div>
+                    <div class="avatar-card glass-panel" id="avatarCard">
+                        <div class="avatar-inner">
+                            <img src="assets/avatar.png" alt="Kazi Haque Avatar" class="avatar-img">
+                            <div class="avatar-glow-overlay"></div>
+                        </div>
+                        <div class="avatar-tag">
+                            <span class="tag-label">FOUNDER & PRODUCT LEADER</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <a href="#services" aria-label="Scroll to Services Section">
+                    <span class="mouse">
+                        <span class="wheel"></span>
+                    </span>
+                    <span class="arrow"></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Executive Metrics Banner -->
+        <section class="metrics-section">
+            <div class="container metrics-container">
+                <div class="metric-block">
+                    <span class="metric-number">$500K+</span>
+                    <span class="metric-label">Seed Capital Raised</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-block">
+                    <span class="metric-number">10+</span>
+                    <span class="metric-label">Fortune 500 Deploys</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-block">
+                    <span class="metric-number">$500K+</span>
+                    <span class="metric-label">Annual SaaS Revenue</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-block">
+                    <span class="metric-number">100K+</span>
+                    <span class="metric-label">Developers Trained</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">01. Consulting Offerings</span>
+                    <h2 class="section-title">Advisory & Services</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card glass-panel">
+                        <div class="service-icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="service-card-title">Developer Ecosystem & GTM</h3>
+                        <p class="service-card-desc">
+                            GTM strategy consulting for developer tools, APIs, and SDKs. Structuring developer-led growth loops, advocacy channels, and community pipelines that convert. Proven track record leading Google Developer Groups and Intel evangelism.
+                        </p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service-card glass-panel">
+                        <div class="service-icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="9" y1="3" x2="9" y2="21"></line>
+                                <line x1="15" y1="3" x2="15" y2="21"></line>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="3" y1="15" x2="21" y2="15"></line>
+                            </svg>
+                        </div>
+                        <h3 class="service-card-title">Fractional CPO & Product Audit</h3>
+                        <p class="service-card-desc">
+                            Objective analysis of product-market fit, UX workflows, feature backlogs, and telemetry architectures. Providing actionable roadmaps for high-growth SaaS startups to streamline resource allocation and unlock metrics-driven scaling.
+                        </p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service-card glass-panel">
+                        <div class="service-icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="service-card-title">AI & IoT Enterprise Architectures</h3>
+                        <p class="service-card-desc">
+                            Designing systems that bridge software and hardware. Specializing in computer vision pipelines, OpenVINO-optimized CPU architectures, LoRaWAN physical layers, and edge computing strategies that reduce cloud latency and deployment overhead.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ventures / Career History Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">02. Venture Track Record</span>
+                    <h2 class="section-title">Founding & Professional Path</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-info glass-panel">
+                        <h3 class="about-grid-subtitle">Bridging Innovation and GTM</h3>
+                        <p class="about-p">
+                            As a builder and business-minded leader, I scale products at the intersection of AI, Edge Computing, and B2B SaaS. My focus is delivering enterprise-grade technologies that solve real-world problems.
+                        </p>
+                        <p class="about-p">
+                            From raising seed funding to deploying systems for Fortune 500 clients, I align engineering pipelines directly with business metrics, sales targets, and product acquisitions.
+                        </p>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <h3 class="stat-num">10+</h3>
+                                <p class="stat-label">Years Experience</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3 class="stat-num">20+</h3>
+                                <p class="stat-label">Engineers Managed</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3 class="stat-num">$1M+</h3>
+                                <p class="stat-label">Direct Value Generated</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-interactive-tabs glass-panel">
+                        <div class="tabs-nav">
+                            <button class="tab-btn active" data-tab="experience">Work Experience</button>
+                            <button class="tab-btn" data-tab="skills">Core Expertise</button>
+                            <button class="tab-btn" data-tab="education">Education</button>
+                        </div>
+                        <div class="tabs-content">
+                            <!-- Experience Tab -->
+                            <div class="tab-pane active" id="tab-experience">
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot"></div>
+                                        <div class="timeline-meta">Apr 2023 - Present</div>
+                                        <h4 class="timeline-title">Co-Founder & Growth Head</h4>
+                                        <p class="timeline-org">Blackspektro Solutions LLC — USA</p>
+                                        <p class="timeline-desc">Leading feature prioritization and GTM strategy for <b>Kernopy.com</b> (IIoT automation SaaS). Driving <b>$500K+ in annual revenue</b> and scaling relations in the US & APAC.</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot"></div>
+                                        <div class="timeline-meta">Aug 2021 - Present</div>
+                                        <h4 class="timeline-title">Founder & Product Manager</h4>
+                                        <p class="timeline-org">Dynopii Corporation — USA / India</p>
+                                        <p class="timeline-desc">Secured <b>$500K seed funding</b>. Led product strategy for <b>Callchimp.ai</b> voice automation, pivoting to enterprise B2B SaaS targeting BFSI & Retail.</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot"></div>
+                                        <div class="timeline-meta">May 2020 - Aug 2021</div>
+                                        <h4 class="timeline-title">Product Manager</h4>
+                                        <p class="timeline-org">Hipla Technologies — Singapore (Acquired by Inventry UK)</p>
+                                        <p class="timeline-desc">Shipped real-time CCTV compliance SaaS (<b>Contatrack.ai</b>) to 10+ Fortune 500 clients, cutting operational deployment costs by 30%. Core lead in the acquisition process.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Skills Tab -->
+                            <div class="tab-pane" id="tab-skills">
+                                <div class="skills-category">
+                                    <h4 class="skills-cat-title">Strategic leadership</h4>
+                                    <div class="skills-list">
+                                        <span class="skill-tag">Product GTM & Scaling</span>
+                                        <span class="skill-tag">Developer Relations</span>
+                                        <span class="skill-tag">Fundraising & Seed pitch</span>
+                                        <span class="skill-tag">B2B SaaS Strategy</span>
+                                        <span class="skill-tag">Enterprise Sales & POCs</span>
+                                    </div>
+                                </div>
+                                <div class="skills-category">
+                                    <h4 class="skills-cat-title">Technical Competence</h4>
+                                    <div class="skills-list">
+                                        <span class="skill-tag">AI / ML / LLMs</span>
+                                        <span class="skill-tag">IoT & Edge Computing</span>
+                                        <span class="skill-tag">OpenVINO & NVIDIA CUDA</span>
+                                        <span class="skill-tag">Python & Java Spring</span>
+                                        <span class="skill-tag">AWS & GCP Architectures</span>
+                                        <span class="skill-tag">LoRaWAN & MQTT Networks</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Education Tab -->
+                            <div class="tab-pane" id="tab-education">
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot"></div>
+                                        <div class="timeline-meta">2010 - 2014</div>
+                                        <h4 class="timeline-title">B.Tech in Information Technology</h4>
+                                        <p class="timeline-org">West Bengal University of Technology</p>
+                                        <p class="timeline-desc">Specialized in software engineering structures, network designs, and core Java environments. Graduated with a 7.2 GPA.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shipped Products Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">03. Shipped Products</span>
+                    <h2 class="section-title">Core Ventures</h2>
+                    <div class="section-line"></div>
+                </div>
+                <!-- Project Filters -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ai">AI / ML</button>
+                    <button class="filter-btn" data-filter="iot">IoT & Edge</button>
+                </div>
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Callchimp.ai -->
+                    <div class="project-card glass-panel" data-category="ai">
+                        <div class="project-img-wrapper">
+                            <img src="assets/project1.png" alt="Callchimp.ai Mockup" class="project-img">
+                            <div class="project-hover-overlay">
+                                <a href="https://callchimp.ai" target="_blank" rel="noopener" class="project-link-icon" aria-label="Visit Callchimp.ai">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-tag">AI Voice Automation</span>
+                                <span class="project-tag">B2B SaaS</span>
+                            </div>
+                            <h3 class="project-title">Callchimp.ai</h3>
+                            <p class="project-description">Founder-led conversational AI phone automation. Secured $500K in seed funding, pivoting the platform to serve BFSI & Retail sectors with voice analytics, scalable campaigns, and cloud integration.</p>
+                        </div>
+                    </div>
+                    <!-- Kernopy.com -->
+                    <div class="project-card glass-panel" data-category="iot">
+                        <div class="project-img-wrapper">
+                            <img src="assets/project2.png" alt="Kernopy.com Mockup" class="project-img">
+                            <div class="project-hover-overlay">
+                                <a href="https://kernopy.com" target="_blank" rel="noopener" class="project-link-icon" aria-label="Visit Kernopy.com">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-tag">Industrial Automation</span>
+                                <span class="project-tag">IIoT</span>
+                            </div>
+                            <h3 class="project-title">Kernopy.com</h3>
+                            <p class="project-description">Co-founder & GTM Lead. An industrial automation SaaS monitoring telemetry signals and machinery health. Currently driving $500K+ in annual revenue, connecting active sensors to cloud analytics.</p>
+                        </div>
+                    </div>
+                    <!-- Contatrack.ai -->
+                    <div class="project-card glass-panel" data-category="ai">
+                        <div class="project-img-wrapper">
+                            <img src="assets/project3.png" alt="Contatrack.ai Mockup" class="project-img">
+                            <div class="project-hover-overlay">
+                                <span class="project-link-icon" aria-label="Acquired Project">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-tag">Computer Vision</span>
+                                <span class="project-tag">Acquired</span>
+                            </div>
+                            <h3 class="project-title">Contatrack.ai</h3>
+                            <p class="project-description">Product Manager @ Hipla (Acquired by Inventry UK). Real-time CCTV safety compliance platform utilizing CPU-optimized deep learning facial recognition pipelines to trim cloud overhead costs by ~30%.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Involvement Section (Brand New!) -->
+        <section id="community" class="community-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">04. Community & Advocacy</span>
+                    <h2 class="section-title">Ecosystem Involvement</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="community-grid">
+                    <!-- Card 1 -->
+                    <div class="comm-card glass-panel">
+                        <div class="comm-logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="comm-title">GDG Cloud Kolkata</h3>
+                        <p class="comm-role">Chapter Lead (10,000+ members)</p>
+                        <p class="comm-desc">Scaled the chapter from 0 to over 10K members. Actively mentoring regional chapters across GDG India and shaping cloud developer pipelines.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="comm-card glass-panel">
+                        <div class="comm-logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="comm-title">Intel Software Innovator</h3>
+                        <p class="comm-role">4× Consecutive Award Winner (2020–2023)</p>
+                        <p class="comm-desc">Recognized for outstanding evangelism of oneAPI and OpenVINO toolkits, training over 100K+ developers globally in AI & Edge Compute.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="comm-card glass-panel">
+                        <div class="comm-logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="comm-title">Dify.ai Community Consultant</h3>
+                        <p class="comm-role">India Service Provider</p>
+                        <p class="comm-desc">Guiding the developer community on building complex LLM orchestration pipelines using Dify's open-source developer tool suite.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="comm-card glass-panel">
+                        <div class="comm-logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="comm-title">Global Ecosystem Advocacy</h3>
+                        <p class="comm-role">DigitalOcean & FlutterFlow Chapters</p>
+                        <p class="comm-desc">Serving as Chapter Lead for FlutterFlow Community Kolkata (2024) and representative for the DigitalOcean Wavemaker India cohort.</p>
+                    </div>
+                </div>
+
+                <div class="speaker-mentions glass-panel">
+                    <h3 class="speaker-title">Academic Speaking & Developer Workshops</h3>
+                    <p class="speaker-intro">
+                        Invited speaker and instructor delivering deep-tech hands-on sessions on AI architectures and Edge computing to academic research hubs:
+                    </p>
+                    <div class="speaker-badges">
+                        <span class="speaker-badge">IIT Kharagpur</span>
+                        <span class="speaker-badge">IIT Delhi</span>
+                        <span class="speaker-badge">ISI Kolkata</span>
+                        <span class="speaker-badge">IIT Kanpur</span>
+                        <span class="speaker-badge">IIT Guwahati</span>
+                        <span class="speaker-badge">NIT Trichy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">05. Communication</span>
+                    <h2 class="section-title">Schedule & Connect</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info glass-panel">
+                        <h3 class="contact-subtitle">Let's start a discussion</h3>
+                        <p class="contact-desc">
+                            Looking to audit your SaaS codebase, scale your product roadmap, structure your developer relation initiatives, or recruit a fractional CPO? Choose a channel below.
+                        </p>
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <div class="icon-wrapper">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                </div>
+                                <div class="detail-text">
+                                    <span class="detail-label">Introductory Meet</span>
+                                    <a href="https://calendly.com/kazithaque22/introductory-meet-with-kazi-haque" target="_blank" rel="noopener" class="detail-link">calendly.com/kazithaque22/introductory-meet</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="icon-wrapper">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                                <div class="detail-text">
+                                    <span class="detail-label">WhatsApp Hotlink</span>
+                                    <a href="https://wa.me/919681213259" target="_blank" rel="noopener" class="detail-link">+91 96812 13259</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="icon-wrapper">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="detail-text">
+                                    <span class="detail-label">Email Direct</span>
+                                    <a href="mailto:kazithaque22@gmail.com" class="detail-link" id="emailCopyBtn">kazithaque22@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Socials -->
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/haquekazi" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper glass-panel">
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <input type="text" id="formName" name="name" required placeholder=" ">
+                                <label for="formName">Your Name</label>
+                                <span class="form-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="formEmail" name="email" required placeholder=" ">
+                                <label for="formEmail">Your Email</label>
+                                <span class="form-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="formSubject" name="subject" required placeholder=" ">
+                                <label for="formSubject">Subject</label>
+                                <span class="form-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="formMessage" name="message" required rows="5" placeholder=" "></textarea>
+                                <label for="formMessage">Your Message</label>
+                                <span class="form-line"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full glow-effect">
+                                Send Advisory Inquiry
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Kazi Haque. All rights reserved.</p>
+            <p class="credits">Designed & Engineered with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>
