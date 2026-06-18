@@ -434,7 +434,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (emailBtn) {
         emailBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            const email = emailBtn.textContent.trim();
+            const email = emailBtn.getAttribute('href').replace('mailto:', '');
             
             navigator.clipboard.writeText(email).then(() => {
                 showToast("Email address copied to clipboard!");

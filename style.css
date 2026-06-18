@@ -1474,33 +1474,39 @@ html[data-theme-mode="light"] .sun-icon {
     color: var(--primary);
 }
 
-.social-links {
+.contact-icons-row {
     display: flex;
-    gap: 12px;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 15px;
+    margin-bottom: 30px;
 }
 
-.social-link {
-    width: 36px;
-    height: 36px;
+.contact-circle-btn {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
     background: var(--bg-secondary);
     border: 1px solid var(--border);
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-secondary);
-    transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+    color: var(--primary);
+    box-shadow: var(--shadow-main);
+    transition: transform var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.social-link:hover {
+.contact-circle-btn:hover {
+    transform: translateY(-2px) scale(1.05);
     border-color: var(--primary);
     color: var(--text-primary);
     background: var(--primary-glow);
+    box-shadow: 0 5px 15px var(--primary-glow);
 }
 
-.social-link svg {
-    width: 16px;
-    height: 16px;
+.contact-circle-btn svg {
+    width: 20px;
+    height: 20px;
 }
 
 /* Form Styles */
